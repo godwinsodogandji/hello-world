@@ -13,10 +13,12 @@ public class HelloWorldApplication {
 	}
 
 	@GetMapping("/hello")
-	//on définit une route GET "/hello"
-	public String getMethodName(@RequestParam String param){
-		return new String();
+	public String hello(@RequestParam String param){ //
+		return String.format("Hello %s !",  param);
 	}
+	
+	@GetMapping("/hello")
+	//on définit une route GET "/hello"
 	public String hello(String name){
 		return String.format("Hello %s !",  name);
 	}
